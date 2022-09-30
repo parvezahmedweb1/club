@@ -2,6 +2,7 @@ import React from "react";
 
 const Sport = (props) => {
   const { img, name, info, time } = props.sport;
+
   return (
     <div className="col">
       <div className="card h-100">
@@ -10,7 +11,12 @@ const Sport = (props) => {
           <h5 className="card-title">{name}</h5>
           <p className="card-text">{info}</p>
           <p className="card-text">{time}</p>
-          <button className="btn btn-primary">Add To List</button>
+          <button
+            onClick={() => props.handleAddToList(time)}
+            className="btn btn-primary"
+          >
+            Add To List
+          </button>
         </div>
       </div>
     </div>
